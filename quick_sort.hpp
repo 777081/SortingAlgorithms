@@ -3,6 +3,8 @@
 #include <cstddef>
 #include <utility>
 
+using std::swap;
+
 template <typename T> int partition(T* array, int left, int right){
     T pivot = array[right];  
     int i = left - 1;
