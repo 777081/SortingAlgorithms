@@ -10,7 +10,7 @@
 #include "merge_sort.hpp"
 #include "quick_sort.hpp"
 
-const vector<int> MEASUREMENT_POINTS = {500000, 1000000};
+const vector<int> MEASUREMENT_POINTS = {100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
 const vector<double> TEST_FRACTIONS = {0.25, 0.5, 0.75, 0.95, 0.99, 0.997};
 const int SEEDS = 100;
 
