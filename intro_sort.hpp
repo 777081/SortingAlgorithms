@@ -75,8 +75,16 @@ template <typename T> void intro_sort_util(T* array, int left, int right, int ma
         return;
     }
 
-    int partition = partition(array, left, right);
+    int p = partition(array, left, right);
 
-    intro_sort_util(array, left, partition, max_depth - 1);
-    intro_sort_util(array, partition + 1, right, max_depth - 1);
+    intro_sort_util(array, left, p, max_depth - 1);
+    intro_sort_util(array, p + 1, right, max_depth - 1);
+}
+
+template <typename T> void intro_sort(T* tab, int left, int right) {
+    if (left >= right) return;
+
+    int n = right - left + 1;
+    int depth_limit = 2 * static_cast<size_t>(std::log2(n));
+    intro_sort_util(tab, left, right, depth_limit);
 }
